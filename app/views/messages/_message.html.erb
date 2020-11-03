@@ -1,0 +1,24 @@
+<div class="event">
+<% if message.user.username == "Administrator" %>
+  <div class="label">
+    <i class="user blue icon"></i>
+  </div>
+<% else %>
+  <div class="label">
+    <i class="user icon"></i>
+  </div>
+<% end %>
+  <div class="content">
+    <div class="summary">
+      <a class="user">
+        <%= message.user.username %>
+      </a>
+      <div class="date">
+        <%= time_ago_in_words(message.created_at) %> ago
+      </div>
+      <div class="extra text">
+        <%= message.body %>
+      </div>
+    </div>
+  </div>
+</div>
